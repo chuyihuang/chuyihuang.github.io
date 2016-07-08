@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>1023 | 台中前端社群</title>
+
+		<meta name="description" content="台中前端社群">
+		<meta name="author" content="HCY">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<link rel="stylesheet" href="css/mystyle.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- slides -->
+				<section>
+					<img src="./images/f2e-logo-b.png" alt="" style="border:none">
+					<h3>聊聊<span class="red">偽元素</span>與<span class="red">偽類</span></h3>
+					<h4>Taichung Frontend Group</h4>
+					<p>簡報連結: http://frontend.inow.tw/events/1023/</p>
+				</section>
+				<section>
+					<h2>今日流程</h2>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 來賓自我介紹</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 什麼是偽類與偽元素</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 中場休息</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 介紹CSS3的偽類/偽元素</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> Demo</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> QnA</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 交流時間</li>
+					</ul>
+				</section>
+				<section>
+					<h2>自我介紹時間</h2>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 我的名字是</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 任職的公司與職務</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 關於CSS偽元素/偽類，我的了解是...</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> Or 關於CSS，我想學的是</li>
+					</ul>
+				</section>
+				<section>
+					<h3>偽類與偽元素都是屬於選擇器的一部份</h3>
+				</section>
+				<section>
+					<h2>為什麼要有偽類與偽元素?</h2>
+					<p>為了將DOM以外的內容格式化</p>
+				</section>
+				<section>
+					<h2>什麼是偽類? Pseudo-classes</h2>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 依附在選擇器上</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 使用單冒號</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 設定選擇器的特殊狀態與效果</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 換句話說就是在已經存在的DOM上設定隱藏狀態</li>
+					</ul>
+					<p style="margin-top:30px;">我是選擇器:<span class="red">我是偽類</span> { 屬性:設定; } </p>
+				</section>
+				<section>
+					<h2>偽類一覽表</h2>
+					<h4>CSS1&2</h4>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> :link</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> :visited</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> :active</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> :hover</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> :focus</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> :lang(language)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>什麼是偽元素</h2>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 依附在選擇器上</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 使用雙冒號</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 建立不存在的元素</li>
+					</ul>
+					<p>我是選擇器::<span class="red">我是偽類</span> { 屬性:設定;} </p>
+				</section>
+				<section>
+					<h2>偽元素一覽表</h2>
+					<h4>CSS1&2</h4>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> ::first-letter</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> ::first-line</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> ::before</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> ::after</li>
+					</ul>
+				</section>
+				<section>
+					<h3>用單冒號與雙冒號來分別偽類與偽元素</h3>
+					<p>因為歷史因素，瀏覽器為了相容，偽元素可以使用單冒號</p>
+					<p>因此li:before與li::before都可以</p>
+					<p>但是a::hover就不行</p>
+				</section>
+				<section>
+					<h2>中場休息</h2>
+				</section>
+				<section>
+					<h2>CSS3的偽類/偽元素</h2>
+					<p>很多，超級多</p>
+					<p>參考: <a href="http://www.w3schools.com/cssref/css_selectors.asp">http://www.w3schools.com/cssref/css_selectors.asp</a></p>
+				</section>
+				<section>
+					<h2>CSS3的偽類/偽元素列表1</h2>
+					<h4>CSS Diner的練習</h4>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:checked</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:disabled</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:empty</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:enabled</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:first-of-type</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:in-range</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:invalid</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:last-child</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:last-of-type</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:not(selector)</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:nth-child(n)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>CSS3的偽類/偽元素列表2</h2>
+					<h4>CSS Diner的練習</h4>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:nth-last-child(n)</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:nth-last-of-type(n)</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:nth-of-type(n)</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:only-of-type</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:only-child</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:optional</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:out-of-range</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:read-only</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:read-write</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:required</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:root</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i><span class="red">::selection</span></li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:target</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>:valid</li>
+					</ul>
+				</section>
+				<section>
+					<h1>demo</h1>
+				</section>
+				<section>
+					<h1>Q & A</h1>
+					<h3>關於偽元素，我還想了解的是...</h3>
+				</section>
+				<section>
+					<h2>交流時間</h2>
+					<img src="./images/social.jpg" alt="" class="img">
+				</section>
+				<section>
+					<h2>參考文件</h2>
+					<ul class="lstn">
+						<li><i class="fa fa-arrow-circle-right"></i><a href="http://www.w3schools.com/css/css_pseudo_elements.asp">http://www.w3schools.com/css/css_pseudo_elements.asp</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="http://www.w3schools.com/css/css_pseudo_classes.asp">http://www.w3schools.com/css/css_pseudo_classes.asp</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="http://blog.mukispace.com/pseudo-elements-10-examples/">那些 CSS 偽元素可以幫你做的 10 個效果</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="http://swordair.com/origin-and-difference-between-css-pseudo-classes-and-pseudo-elements">http://swordair.com/origin-and-difference-between-css-pseudo-classes-and-pseudo-elements</a></li>
+						<li><i class="fa fa-arrow-circle-right"></i><a href="http://www.w3school.com.cn/cssref/css_selectors.asp">http://www.w3school.com.cn/cssref/css_selectors.asp</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>交流時間</h2>
+					<img src="./images/social.jpg" alt="" class="img">
+				</section>
+				<section>
+					<h1>Thank You</h1>
+					<img src="./images/clap.jpg" alt="" class="fragment" style="width:40%">
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>

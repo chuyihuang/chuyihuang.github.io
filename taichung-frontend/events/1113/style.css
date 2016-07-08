@@ -1,0 +1,177 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.box1 {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	margin: 10px;
+	border:10px solid #000;
+	background: #cdcdcd;
+}
+
+.box2 {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	margin: 10px;
+	border:10px solid #f00;
+	/* inline-block */
+	display: inline-block;
+	background: #dfdfdf;
+}
+
+.box3 {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	margin: 10px;
+	border:10px solid #00f;
+	/* inline-block */
+	display: inline;
+	background: #ff0;
+}
+
+/* block裡面包inline */
+
+.box4 {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	margin: 10px;
+	border:10px solid #000;
+	background: #cdcdcd;
+}
+
+.inline1 {
+	color: red;
+	font-size: 1.5em;
+	padding: 5px;
+	margin: 5px;
+	border:1px dotted #fff;
+}
+
+.inline2 {
+	color: blue;
+	font-size: 2em;
+	padding: 10px;
+	margin: 10px;
+	border:2px solid #000;
+}
+
+section h1 {
+	color:black;
+}
+
+.content-box {
+	box-sizing: content-box;
+	width: 200px;
+	height: 200px;
+	padding: 5px;
+	margin: 5px;
+	background: #ff0;
+	border:10px solid blue;
+	font-size: 2em;
+}
+.border-box {
+	box-sizing: border-box;
+	width: 200px;
+	height: 200px;
+	padding: 5px;
+	margin: 5px;
+	background: #0ff;
+	border:10px solid green;
+	font-size: 2em;
+}
+
+/*******  stack  *******/
+
+#stack {
+	position: relative;
+	background: #cecece;
+}
+
+#stack-minus-z {
+	width: 970px;
+	height: 570px;
+	background: red;
+	z-index: -999;
+	position: absolute;
+	baseline: 30px;
+	left: 30px;
+}
+
+#stack-block {
+	width: 940px;
+	height: 540px;
+	background: yellow;
+	position: absolute;
+	baseline: 60px;
+	left: 60px;
+}
+
+#stack-float {
+	width: 910px;
+	height: 510px;
+	background: green;
+	position: absolute;
+	baseline: 90px;
+	left: 90px;
+	float:left;
+}
+
+#wrapper {
+	/*font-size: 0;*/
+}
+
+.height1 {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	border:5px solid #000;
+	display: inline-block;
+
+}
+.height2 {
+	width: 100px;
+	height: 300px;
+	padding: 30px;
+	background: red;
+	border:5px solid #000;
+	display: inline-block;
+
+}
+.height3 {
+	width: 100px;
+	height: 220px;
+	background: white;
+	border:5px solid #000;
+	display: inline-block;
+
+}
+.height4 {
+	width: 100px;
+	height: 80px;
+	background: navy;
+	border:5px solid #000;
+	display: inline-block;
+
+}
+.height5 {
+	width: 100px;
+	height: 380px;
+	background: orange;
+	border:5px solid #000;
+	display: inline-block;
+	padding: 50px;
+}
+.height6 {
+	width: 100px;
+	height: 250px;
+	background: green;
+	border:5px solid #000;
+	display: inline-block;
+
+}

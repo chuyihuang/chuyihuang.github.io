@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>台中前端社群 1023 範例</title>
+  <style>
+    /* before & after*/
+    #before_after {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 100px;
+      text-align: center;
+    }
+    #before_after ul {
+      list-style-type: none;
+      font-size: 2.5em;
+    }
+    #before_after li {
+      display: inline-block;
+      padding: 5px 10px;
+    }
+    #before_after li+li:before {
+      color:red;
+      content: " > ";
+    }
+  </style>
+</head>
+<body>
+  <h1>before & after範例</h1>
+  <div id="before_after">
+    <ul>
+      <li>001</li>
+      <li>002</li>
+      <li>003</li>
+      <li>004</li>
+    </ul>
+  </div>
+</body>
+</html>

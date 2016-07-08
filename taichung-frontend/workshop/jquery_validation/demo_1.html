@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validation DEMO 1</title>
+	<style>
+		body {
+			margin: 0 auto;
+			text-align: center;
+			font-size: 2em;
+		}
+		ul {
+			list-style-type: none;
+		}
+		ul li {
+			margin-top: 10px;
+		}
+		input[type=submit] {
+			font-size: 30px;
+		}
+		.error {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>表單DEMO</h1>
+	<p>
+		<form action="somewhere.html" id="demoForm">
+			<p id="mainError"></p>
+			<ul>
+				<li>我是必填: <input type="text" name="must" id=""> </li>
+				<li>我是Email: <input type="text" name="email" id="" value="abc@..."> </li>
+				<li>我是網址: <input type="text" name="url" id="" value="http://..."> </li>
+				<li>我是電話: <input type="text" name="cell" id="" value="09xx">	 </li>
+				<li>我是密碼: <input type="password" name="password" id="password"> </li>
+				<li>密碼確認: <input type="password" name="passwordConfirm" id=""> </li>
+				<li><input type="checkbox" name="mustCheck" id=""> 我必須打勾</li>
+			</ul>
+			<p><input type="submit" value="輸入"></p>
+		</form>
+	</p>
+	<script src="./jquery-1.11.2.min.js"></script>
+	<script src="./jquery.validate.min.js"></script>
+	<script>
+		// 自定規則
+		jQuery.validator.addMethod("testCell", function(value, element) {
+		  return this.optional(element) || /^09\d{8}$/.test(value);
+		});
+
+		$(function(){
+			$("#demoForm").validate({
+				invalidHandler: function(event, validator) {
+					$("#mainError").text("發生錯誤了!請檢查").addClass("error");
+					return false
+				},
+				rules: {
+					"must": {
+						required: true
+					},
+					"email": {
+						email: true
+					},
+					"url": {
+						url: true
+					},
+					"cell": {
+						required: true,
+						testCell: true
+					},
+					"password": {
+						required: true,
+						minlength: 6,
+						maxlength: 12
+					},
+					"passwordConfirm": {
+						equalTo: "#password"
+					},
+					"mustCheck": {
+						required: true
+					}
+				},
+				messages: {
+					"must": {
+						required: "必須填我!"
+					},
+					"email": {
+						email: "不符合Email格式!"
+					},
+					"url": {
+						url: "不符合URL格式"
+					},
+					"cell": {
+						required: "必填！",
+						testCell: "必須符合手機格式"
+					},
+					"password": {
+						required: "密碼為必填",
+						minlength: "長度至少為6碼",
+						maxlength: "長度請勿超過12碼"
+					},
+					"passwordConfirm": {
+						equalTo: "需要與密碼一致！"
+					},
+					"mustCheck": {
+						required: "請勾我"
+					}
+				}
+			});
+		})
+	</script>
+</body>
+</html>

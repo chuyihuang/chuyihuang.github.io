@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validation</title>
+	<style>
+		body {
+			margin: 0 auto;
+			text-align: center;
+			font-size: 2em;
+		}
+		ul {
+			list-style-type: none;
+		}
+		ul li {
+			margin-top: 10px;
+		}
+		input[type=submit] {
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>HTML5表單驗證範例</h1>
+	<form action="">
+		<ul>
+			<li>Email: <input type="email" name="email"></li>
+			<li>數字: <input type="number" name="quantity"></li>
+			<li>搜尋: <input type="search" name="googlesearch"></li>
+			<li>網址: <input type="url" name="homepage"></li>
+			<li>時間: <input type="time" name="enrolltime"></li>
+			<li>顏色: <input type="color" name="color"></li>
+			<li>範圍: <input type="range" name="range"></li>
+			<li>必填: <input type="text" name="require" required></li>
+			<li>Min, Max, Step: <input type="range" min="0" max="15" step="5" value="5"> </li>
+			<li>樣式: <input type="text" name="cell" pattern="09\d{8}" title="手機號碼"></li>
+		</ul>
+		<input type="submit" value="輸入">
+	</form>
+</body>
+</html>

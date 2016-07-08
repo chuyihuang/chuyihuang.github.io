@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3 Animation</title>
+  <!-- css -->
+  <style>
+    @-webkit-keyframes move1 {
+      from {
+        top: 60px;
+        left:-200px;
+      }
+      to {
+        top: 60px;
+        left: 2200px;
+      }
+    }
+    @-webkit-keyframes move2 {
+      from {
+        top: 200px;
+        left:-100px;
+      }
+      to {
+        top: 200px;
+        left: 2600px;
+      }
+    }
+    @-webkit-keyframes move3 {
+      0% {
+        top: 240px;
+        left:-300px;
+      }
+      40% {
+        top: 180px;
+        left:500px;
+      }
+      60% {
+        top: 280px;
+        left:1200px;
+      }
+      100% {
+        top: 260px;
+        left: 2100px;
+      }
+    }
+    @-webkit-keyframes move4 {
+      from {
+        -webkit-transform: scale(1.2, 1.4);
+      }
+      to {
+       -webkit-transform: scale(1, 1.2);
+      }
+    }
+
+    body {
+      width: 100%;
+      background: #40c8f9;
+    }
+    #cloud1 {
+      position: absolute;
+      -webkit-animation-name: move1;
+      -webkit-animation-duration: 6s;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+    }
+    #cloud2 {
+      position: absolute;
+      -webkit-animation-name: move2;
+      -webkit-animation-duration: 8s;
+      -webkit-animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+      -webkit-animation-iteration-count: infinite;
+    }
+    #cloud3 {
+      position: absolute;
+      top:240px;
+      left: -300px;
+      -webkit-animation-name: move3;
+      -webkit-animation-duration: 7s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: normal;
+    }
+    #cloud4 {
+      position: absolute;
+      top:450px;
+      left: 600px;
+      -webkit-animation-name: move4;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-iteration-count: infinite;
+    }
+  </style>
+</head>
+<!-- html -->
+  <img src="./images/cloud.png" alt="" id="cloud1">
+  <img src="./images/cloud.png" alt="" id="cloud2">
+  <img src="./images/cloud.png" alt="" id="cloud3">
+  <img src="./images/cloud.png" alt="" id="cloud4">
+<body>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* 你的選擇器是從右邊往左寫，瀏覽器是從左往右看 */
+
+#head table th {
+  height: 30px;
+  padding: 10px 20px;
+}
+
+section#top .container .row .col-lg-12 .table a {...}
+
+/* 比較 */
+
+section * {}
+section a {}
+section .link {}
+.container .link {}
+#box .link {}
+
+/* 濫用巢狀選擇器的問題 */
+
+section#top .container .row .col-lg-12 .table a, section#top .container .row .col-lg-12 .table td, article#book .container .row .col-lg-12 form input[type=text] {}
+
+/* 避免使用萬用選擇器 */
+
+div a {} /*效能極差*/
+#container .link /*清楚易懂*/
+
