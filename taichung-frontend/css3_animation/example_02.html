@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3 Transition</title>
+  <!-- css -->
+  <style>
+    body {
+      width: 100%;
+      background: #eee;
+    }
+    #delay {
+      background: #0f5036;
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      color: orange;
+      font-size: 2.5em;
+      text-align: center;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-delay: 2s;
+      transition-timing-function: ease;
+    }
+    #delay:hover {
+      width: 100%;
+    }
+    #demo1 {
+      background: #ff0000;
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      color: yellow;
+      font-size: 2.5em;
+      text-align: center;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-timing-function: ease;
+    }
+    #demo1:hover {
+      width: 100%;
+    }
+    #demo2 {
+      background: #00ff00;
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      color: white;
+      font-size: 2.5em;
+      text-align: center;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-timing-function: linear;
+    }
+    #demo2:hover {
+      width: 100%;
+    }
+    #demo3 {
+      background: purple;
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      color: green;
+      font-size: 2.5em;
+      text-align: center;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-timing-function: ease-in;
+    }
+    #demo3:hover {
+      width: 100%;
+    }
+    #demo4 {
+      background: blue;
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      color: yellow;
+      font-size: 2.5em;
+      text-align: center;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-timing-function: ease-out;
+    }
+    #demo4:hover {
+      width: 100%;
+    }
+    #demo5 {
+      background: black;
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      color: #efefef;
+      font-size: 2em;
+      text-align: center;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-timing-function: ease-in-out;
+    }
+    #demo5:hover {
+      width: 100%;
+    }
+    #demo6 {
+      background: yellow;
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      color: green;
+      font-size: 2em;
+      text-align: center;
+      transition-property: width;
+      transition-duration: 3s;
+      transition-timing-function: cubic-bezier(.57,1.98,.21,-1.12);
+    }
+    #demo6:hover {
+      width: 100%;
+    }
+
+  </style>
+</head>
+<!-- html -->
+<body>
+  <div id="delay">Delay</div>
+  <div id="demo1">Ease</div>
+  <div id="demo2">Linear</div>
+  <div id="demo3">Ease-in</div>
+  <div id="demo4">Ease-out</div>
+  <div id="demo5">Ease-in-out</div>
+  <div id="demo6">cubic-bezier</div>
+</body>
+</html>

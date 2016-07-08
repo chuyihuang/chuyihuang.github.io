@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3 Animation</title>
+  <!-- css -->
+  <style>
+    @-webkit-keyframes move1 {
+      from {
+        left: 0px;
+      }
+      to {
+        left: 1000px;
+      }
+    }
+    body {
+      width: 100%;
+      background: #eee;
+    }
+    #demo1 {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      background: navy;
+      color: white;
+      font-size: 1.5em;
+      text-align: center;
+      position: absolute;
+      -webkit-animation-fill-mode: forwards;
+      /* none forwards backwards both */
+    }
+    #demo1:hover {
+      -webkit-animation-name: move1;
+      -webkit-animation-duration: 3s;
+      -webkit-animation-timing-function: linear;
+    }
+
+  </style>
+</head>
+<!-- html -->
+<body>
+  <h2>起始與完成狀態 (3s linear)</h2>
+  <div id="demo1">動畫7</div>
+</body>
+</html>

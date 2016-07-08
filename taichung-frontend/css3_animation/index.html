@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CSS3動畫 | 台中前端社群</title>
+
+		<meta name="description" content="台中前端社群">
+		<meta name="author" content="HCY">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<link rel="stylesheet" href="css/mystyle.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- slides -->
+				<section>
+					<h1><i class="fa fa-bullhorn"></i> 台中前端社群</h1>
+					<h4>Taichung Frontend Group</h4>
+				</section>
+				<section>
+					<h2>本週主題 : CSS3動畫</h2>
+				</section>
+				<section>
+					<h2>範例連結:</h2>
+					<ul class="lstn">
+						<li class="more_space"><a href="./example_01.html" target="_blank">漸變效果1</a></li>
+						<li class="more_space"><a href="./example_02.html" target="_blank">漸變效果2</a></li>
+						<li class="more_space"><a href="./example_03.html" target="_blank">動畫範例1</a></li>
+						<li class="more_space"><a href="./example_04.html" target="_blank">動畫範例2</a></li>
+						<li class="more_space"><a href="./example_05.html" target="_blank">動畫範例3</a></li>
+						<li class="more_space"><a href="./example_06.html" target="_blank">動畫範例4</a></li>
+						<li class="more_space"><a href="./example_07.html" target="_blank">動畫範例5</a></li>
+						<li class="more_space"><a href="./example_08.html" target="_blank">動畫範例6</a></li>
+						<li class="more_space"><a href="./example_09.html" target="_blank">動畫範例7</a></li>
+						<li class="more_space"><a href="./example_10.html" target="_blank">變形範例1</a></li>
+						<li class="more_space"><a href="./example_11.html" target="_blank">綜合應用</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Transition 與 Animation</h2>
+					<h2 class="fragment">漸變效果與動畫</h2>
+				</section>
+				<section>
+					<h2>首先討論支援的瀏覽器</h2>
+					<img src="./images/browser-support.png" alt="">
+					<h3 class="fragment"><span class="red">IE10以下不支援!</span></h3>
+				</section>
+				<section>
+					<h2>Transition漸變效果</h2>
+					<h3>就是某個原件從A狀態轉變成B狀態的效果</h3>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>需要指定改變的屬性, 還有開始與結束狀態</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>需要指定時間，例如完成漸變需要2秒(2s)</li>
+					</ul>
+				</section>
+				<section>
+					<h1>demo</h1>
+					<h3>example_01</h3>
+				</section>
+				<section>
+					<h2>transition-delay 延遲啟動</h2>
+					<h3>單位s(秒)或ms(毫秒)</h3>
+				</section>
+				<section>
+					<h2>transition-timing-function 漸變速度</h2>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>linear: 同等速度</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>ease: 慢快慢</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>ease-in: 慢 -> 快</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>ease-out: 快 -> 慢</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>ease-in-out: 慢快慢</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i>cubie-bezier: 自訂</li>
+					</ul>
+				</section>
+				<section>
+					<h2>cubic Bezier</h2>
+					<h3><a href="http://cubic-bezier.com/">http://cubic-bezier.com/</a></h3>
+				</section>
+				<section>
+					<h1>demo</h1>
+					<h3>example_02</h3>
+				</section>
+				<section>
+					<h2>也可以全部塞在一起</h2>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> transition: 屬性 時間 延遲 速度</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> transition: all 3s 2s ease-in</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 最好按照順序，否則IE會失效</li>
+					</ul>
+				</section>
+				<section>
+					<h2>CSS3 Animation</h2>
+					<h3>IE10以下一樣不支援 <i class="fa fa-thumbs-o-down"></i></h3>
+				</section>
+				<section>
+					<h2>與漸變效果差異的地方</h2>
+					<ul class="lstn">
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 動畫需要指定影格名稱</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法控制"影格"</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法"移動"</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法"旋轉"</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法"傾斜"</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法指定"播放次數"</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法指定"播放方向"</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法設定"開始與暫停"</li>
+						<li class="more_space2"><i class="fa fa-arrow-circle-right"></i> 漸變效果無法設定"完成的樣式"</li>
+					</ul>
+				</section>
+				<section>
+					<h2>影格與指定名稱</h2>
+					<ul class="lstn">
+						<li><i class="fa fa-arrow-circle-right"></i> animation-name: 影格名稱</li>
+						<li><i class="fa fa-arrow-circle-right"></i> @keyframes 影格名稱 { from {起始屬性} to {結束屬性}}</li>
+						<li><i class="fa fa-arrow-circle-right"></i> @keyframes 影格名稱 { 0% {屬性1} 50% {屬性3} 100% {屬性4} }</li>
+					</ul>
+				</section>
+				<section>
+					<h1>demo</h1>
+					<h3>example_03~09</h3>
+				</section>
+				<section>
+					<h2>全部整合在一起</h2>
+					<div>animation: 名稱 時間 速度 延遲 重複次數 方向 起始結束狀態</div>
+					<div>name duration timing-function delay iteration-count direction fill-mode</div>
+					<div><span class="red">IE系列必須按照以上順序</span></div>
+				</section>
+				<section>
+					<h2>變形</h2>
+					<h3>Transform</h3>
+					<ul class="lstn">
+						<li class="more_space"><i class="fa fa-arrow-circle-right"></i>translateX,Y: X軸Y軸移動</li>
+						<li class="more_space"><i class="fa fa-arrow-circle-right"></i>rotate: 旋轉</li>
+						<li class="more_space"><i class="fa fa-arrow-circle-right"></i>scaleX,Y: 放大縮小</li>
+						<li class="more_space"><i class="fa fa-arrow-circle-right"></i>skewX,Y: 軸向轉變</li>
+					</ul>
+				</section>
+				<section>
+					<h1>demo</h1>
+					<h3>example_10</h3>
+				</section>
+				<section>
+					<h2>到底CSS3能夠做什麼運用?</h2>
+					<h3>範例DEMO example_11</h3>
+				</section>
+				<section>
+					<h1>Thank You</h1>
+					<img src="./images/clap.jpg" alt="" class="fragment" style="width:40%">
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3 Transition</title>
+  <!-- css -->
+  <style>
+    body {
+      width: 100%;
+      background: #eee;
+    }
+
+    #box1 {
+      margin: 0 auto;
+      background: #000;
+      width: 200px;
+      height: 200px;
+      transition-property: background;
+      transition-duration: 2s;
+    }
+    #box1:hover {
+      background: red;
+    }
+    #box2 {
+      margin: 0 auto;
+      background: blue;
+      width: 200px;
+      height: 200px;
+      transition-property: width;
+      transition-duration: 2s;
+    }
+    #box2:hover {
+      width: 400px;
+    }
+    #box3 {
+      margin: 0 auto;
+      background: green;
+      width: 200px;
+      height: 200px;
+      border: 5px solid orange;
+      border-radius: none;
+      transition-property: border, border-radius;
+      transition-duration: 2s;
+    }
+    #box3:hover {
+      border: 5px dashed purple;
+      border-radius: 50%;
+    }
+    #box4 {
+      margin: 0 auto;
+      background: red;
+      width: 200px;
+      height: 200px;
+      transition-property: all;
+      transition-duration: 1s;
+    }
+    #box4:hover {
+      width: 400px;
+      height: 100px;
+      background: navy;
+    }
+  </style>
+</head>
+<!-- html -->
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3"></div>
+  <div id="box4"></div>
+</body>
+</html>
